@@ -34,6 +34,8 @@ def k(matrix):
         for j in range(i + 1, n(matrix)):
             ratio = matrix[j][i] / matrix[i][i]
             matrix[j] -= ratio * matrix[i]
+            print("Matriz após a alteração:")
+            print(matrix)
 
     return matrix
 
@@ -48,6 +50,59 @@ def start():
 
 start()
 
+
+
+
+
+
+'''import numpy as np
+
+
+def create_matrix():
+    rows = int(input("Informe o número de linhas da matriz: "))
+    cols = int(input("Informe o número de colunas da matriz: "))
+    matrix = np.zeros((rows, cols))
+
+    for i in range(rows):
+        for j in range(cols):
+            value = float(input(f"Informe o valor para a posição [{i},{j}]: "))
+            matrix[i][j] = value
+
+    return matrix
+
+
+def n(matrix):
+    return matrix.shape[1]
+
+
+def set_matrix():
+    matrix = create_matrix()
+    return matrix
+
+
+def pivo(matrix, value):
+    return matrix[value]
+
+
+def k(matrix):
+    for i in range(n(matrix) - 1):
+        for j in range(i + 1, n(matrix)):
+            ratio = matrix[j][i] / matrix[i][i]
+            matrix[j] -= ratio * matrix[i]
+
+    return matrix
+
+
+def start():
+    matrix = set_matrix()
+    matrix = k(matrix)
+
+    print("Matriz após a eliminação de Gauss:")
+    print(matrix)
+
+
+start()
+'''
 
 
 
